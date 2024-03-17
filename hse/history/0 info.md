@@ -1,0 +1,2 @@
+Essay [themes](https://disk.yandex.ru/i/3aNKhu9b7o4HYw)
+[Miro](https://miro.com/welcome/djcyYTlRNTZ6aFJSNnhzUmVVeUJOZ2x2bHFoMkoxeUlIR2ZONTA0UldoZ2ZOWUI3TXZqY1FNTFJIbm5uSVE5RXwzNDU4NzY0NTc4NjM5NzU1MjI2fDQ=?share_link_id=432979255041)
