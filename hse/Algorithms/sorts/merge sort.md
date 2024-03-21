@@ -1,5 +1,5 @@
 # merge sort 
-1. Divide into array into small pieces
+1. Divide array into small pieces
 	1. find mid
 	2. call two function before mid and after
 2. sort each piece

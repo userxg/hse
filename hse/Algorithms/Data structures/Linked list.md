@@ -1,8 +1,92 @@
 # Linked list
-idea: head and linked to it nodes
-operations:
-- push_head - `t(1)`
-- pop_head - `t(1)`
+idea: 
+- There are chain of Nodes
+- Head ptr points to first Node (Can be Tail as well)
+Operations:
+- ListSearch(int key) - `O(n)`
+- ListPrepend - `t(1)`
+- ListDelete - `t(1)`
+# Cormen + cpp
+## representation of Double linked list
+in Node we have **key**  and pointers **prev** and **next**
+```cpp
+struct Node
+{
+	int key;
+	Node* next;
+	Node* prev;
+};
+```
+
+- List by themself
+```cpp
+class List
+{
+	struct Node
+	{
+		int key;
+		Node* next;
+		Node* prev;
+	};
+
+public:
+	List() : l_head(nullptr) {}
+private:
+	Node *l_head;
+};
+```
+
+## Operations
+- ListSearch(key) - O(n), returns Node
+```cpp
+Node* ListSearch(int key)
+{
+	Node* X = head;
+	while (X!=nullptr && X->key != key)
+	{
+		X = X->next;
+	}
+	return X;
+}
+```
+
+- ListPrepend(key) - O(1) - insert given node before head.
+```cpp
+void ListPrepend(Node* X)
+{
+	X->prev = NULL;
+	X->next = l_head;
+
+	if (l_head != NULL)
+		l_head->prev = X;
+
+	l_head = X;
+}
+```
+- List-Insert - `O(1)`  insert given Node X right after Node Y from List.
+```cpp
+void ListInsert(Node * X, Node * Y)
+{
+	X->next = Y->next;  //link X to Y.next
+	X->prev = Y;   //link X to Y
+	if (Y->next != NULL) //link Y.next to X
+		Y->next->prev = X;
+	Y->next = X;  //link Y to X
+}
+```
+- List-Delete `O(1)`  delete given X from List
+```cpp
+void ListDelet(Node* X)
+{
+	if (X->prev != NULL)
+		X->prev->next = X->next;
+	else l_head = X->next;
+	if (X->next != NULL)
+		X->next->prev = X->prev;
+}
+```
+
+![[Pasted image 20240321140925.png|500]]
 # struct realization
 ### Creating 
 ```C++

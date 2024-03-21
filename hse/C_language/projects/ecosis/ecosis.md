@@ -12,6 +12,9 @@ new spawn of childs (with check function)
 death of plants
 moveTawords
 
+FrameGrids
+Live function
+
 Enity
 amimal  - 
 initial ageDeath, view, size, speed, amount, hungerLevelMax, hungerLevelMin, breedingLevel

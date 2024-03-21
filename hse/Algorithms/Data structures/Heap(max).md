@@ -1,7 +1,9 @@
 # priority queue
 
-idea: 
-
+idea: parent has k children they less/more than parent
+parent = (child - 1) / 2
+left = parent* 2 + 1
+right = parent* 2 + 2
 ## complexity
 1. *Insert* `O(logN)` 
 	- N - high of tree, base how many branches we have
@@ -12,6 +14,71 @@ idea:
 	- Swap - `O(1)`
 	- SiftDown - `O(lonN)`
 3. Get Max/Min - `O(1)`
+
+
+## Cormen's version (maxHeap)
+
+```cpp
+class HeapMax
+{
+private:
+	int* heap;
+	int m_Size;
+
+public:
+
+	int Parent(int i) { return (i - 1)/2; }
+	int Left(int i) { return i * 2 + 1; }
+	int Right(int i) { return i * 2 + 2; }
+
+	void BuildHeap(int* arr, int size)
+	{
+		m_Size = size;
+		for (int i = size / 2 - 1; i > 0; --i)
+			MaxHeapify(arr, i);
+	}
+	
+	void HeapSort(int* arr, int size)
+	{
+		BuildHeap(arr, size);
+		for (int i = size - 1; i > 0; --i)
+		{
+			Swap(arr[0], arr[i]);
+			--m_Size;
+			MaxHeapify(arr, 0);
+		}
+	}
+
+	void MaxHeapify(int* arr, int i)
+	{
+		int l = Left(i);
+		int r = Right(i);
+		int largest = i;
+		if (l < m_Size && heap[l] > heap[largest])
+			largest = l;
+		if (r < m_Size && heap[r] > heap[largest])
+			largest = r;
+		if (largest != i)
+		{
+			Swap(heap[i], heap[largest]);
+			MaxHeapify(arr, largest);
+		}
+	}
+
+	HeapMax(int size) : m_Size(size)
+	{
+		heap = new int[size];
+	}
+
+
+	void Swap(int& x, int& y)
+	{
+		int temp = x;
+		x = y;
+		y = temp;
+	}
+};
+```
 
 ```C++
 #include <iostream>

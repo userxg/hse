@@ -2,7 +2,48 @@ idea: LIFO principle
 operations:
 - push - `t(1)`
 - pop - `t(1)`
+- Top - `t(1)`
 - isEmpty - `t(1)`
+
+Has size, top, array
+# Cormen
+- array implementation
+```cpp
+class Stack
+{
+private:
+	int size; //amount
+	int top; // index
+	int* arr;
+public:
+	Stack(int size) : size(size)
+	{
+		arr = new int[size];
+	}
+	bool StackEmpty() { return top == 0; }
+	void Push(int x)
+	{
+		if (top == size)
+			std::cout << "Overflow";
+		else
+			arr[top++] = x;
+	}
+	int Pop()
+	{
+		if (StackEmpty())
+		{
+			std::cout << "Undeflow";
+			//throw error
+		}
+		else
+		{
+			top = top - 1;
+			return arr[top];
+		}		
+	}
+};
+```
+
 
 ```C++
 #include <iostream>
@@ -88,7 +129,7 @@ public:
 	1. if operator -> stack
 	2. if operand -> output line
 	3. while priority of operator <= priority of stack.top() - > in output line
-	4. (  - the biggest priority
+	4. (  - the lowest priority
 	5. ) - all things -> in output
 2. read output
 	1. if operand -> stack 

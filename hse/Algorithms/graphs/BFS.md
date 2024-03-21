@@ -1,3 +1,10 @@
+idea:  - 
+
+**complexity** 
+time - `O(V + E)`
+space - `t(V)` - store visited
+
+
 ## Breadth-first search
 From Cormen 20.2
 - class

@@ -1,12 +1,18 @@
 # hash table
 
 Hash - data structure that is based on Dictionary principle 
+as array but index is our key
 Hash function - generate index in array by key
 
 - Operations
-	- insert - O(1), worst case O(n) because of collision
-	- delete O(1) - O(n)
-	- get value O(1) - O(n)
+	- put(key, value) - O(1), worst case O(n) because of collision
+	- delete(key, value) O(1) - O(n)
+	- get value(key) O(1) - O(n)
+![[Pasted image 20240321153126.png|400]]
+**open addressing** При возникновении коллизии ищем первый доступный пустой слот и помещаем туда ключ/значение.
+During delete mark as "DEL"
+PUT can put in "DEL" and free cell
+Get - the same find as in Delete
 ## simple rolling hash
 ```C++
 lld Hash(string key, int q, int p)

@@ -10,10 +10,16 @@ idea: store date in disjoint subsets
 	- SiftDown - `O(lonN)`
 3. Get Max/Min - `O(1)`
 
+## path compresion
+5. *MakeSet* `O(1)` 
+	- Assign elem of array by x
+6. *Find*- `O(logN)` or *nearly constant*
+	- with path compression and rank
+7. Union - as a Find
 # disjoint task with
 - Path optimization
 - Rank optimization 
-```C++
+```cpp
 class Disjoint
 {
 private:
@@ -111,12 +117,6 @@ int main()
 }
 ```
 
-## complexity
-1. *MakeSet* `O(1)` 
-	- Assign elem of array by x
-2. *Find*- `O(logN)` or *nearly constant*
-	- with path compression and rank
-3. Union - as a Find
 
 Task:
 Ваша цель в данной задаче — реализовать симуляцию объединения таблиц в базе данных. В базе данных есть n таблиц, пронумерованных от 1 до n, над одним и тем же множеством столбцов (атрибутов). Каждая таблица содержит либо реальные записи в таблице, либо символьную ссылку на другую таблицу. Изначально все таблицы содержат реальные записи, и i-я таблица содержит ri записей. Ваша цель — обработать m запросов типа (destinationi , sourcei):

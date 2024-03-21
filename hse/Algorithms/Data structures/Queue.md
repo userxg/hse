@@ -2,7 +2,7 @@
 
 - Queue is a linear data structure which follows FIFO method
 - Data/element is stored first in the queue will be accessed first
-- The ends of a queue are called *Front* and *Rear*.
+- The ends of a queue are called (Head)*Front* and *Rear*.
 - Insertion takes place at the Rear(Tail)
 - Access and remove from the Front
 ### operations
@@ -13,39 +13,38 @@
 # Implementation
 ## Using Array (cycle queue)
 ```C
-using namespace std;
-#define N 10
-
-typedef struct queue
+class Queue
 {
-	int A[N];
-	int max_size;
-	int el_count;
-	int front;
-	int rear;
-}QUEUE;
-
-bool isEmpty(QUEUE* q)
-{
-	return q->el_count == 0;
-}
-
-bool isFull(QUEUE* q)
-{
-	return q->el_count == q->max_size;
-}
-
-void enqueue(QUEUE* q, int val)
-{
-	if (isFull(q))
+private:
+	int size; //amount
+	int head; // index
+	int tail;
+	int* arr;
+	int el_counter;
+public:
+	Queue(int size) : size(size)
 	{
-		cout << "is FULL\n";
-		return;
+		arr = new int[size];
 	}
+	
+	bool Full() { return el_counter == size; }
+	bool Empty() { return el_counter == 0; }
 
-	q->A[q->rear] = val;
-	q->rear = (q->rear + 1) % q->max_size;
-	q->el_count++;
-}
+	void Enqueue(int x)
+	{
+		if (Full()) return;
+		arr[tail] = x;
+		tail = (tail + 1) % size;
+	}
+	
+	int Dequeue()
+	{
+		if (Empty()) return; //error;
+
+		int x = arr[head];
+		head = (head + 1) % size;
+		el_counter--;
+	}
+};
 ```
 
