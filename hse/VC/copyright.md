@@ -1,0 +1,1 @@
+авторские права right of authorship

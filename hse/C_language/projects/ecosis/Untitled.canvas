@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"b6cdb0c2b0d8d869","type":"text","text":"Entity:\n\nAges\ninit spawn amount\nbody\n","x":-125,"y":-30,"width":250,"height":230},
+		{"id":"6acf0213c74e2205","type":"text","text":"Plant","x":-520,"y":440,"width":280,"height":100},
+		{"id":"a090f038b2a9c4e8","type":"text","text":"Animal\nspeed\nhunger\nview\n\n","x":125,"y":440,"width":250,"height":220},
+		{"id":"7b8753c211ba69c3","type":"text","text":"wolf","x":340,"y":940,"width":250,"height":60},
+		{"id":"40166fb61246c11a","type":"text","text":"rabbit","x":-60,"y":880,"width":250,"height":180}
+	],
+	"edges":[
+		{"id":"59c0b4ff41e6c5fd","fromNode":"6acf0213c74e2205","fromSide":"top","toNode":"b6cdb0c2b0d8d869","toSide":"bottom"},
+		{"id":"2464304363daa54d","fromNode":"a090f038b2a9c4e8","fromSide":"top","toNode":"b6cdb0c2b0d8d869","toSide":"bottom"},
+		{"id":"ea3f4384dc09c75e","fromNode":"40166fb61246c11a","fromSide":"top","toNode":"a090f038b2a9c4e8","toSide":"bottom"},
+		{"id":"9a1ff04dfcbabdde","fromNode":"7b8753c211ba69c3","fromSide":"top","toNode":"a090f038b2a9c4e8","toSide":"bottom"}
+	]
+}

@@ -1,0 +1,3 @@
+![[Pasted image 20240318191808.png|400]]
+**GNU General Public License** - это лицензия на свободное программное обеспечение. GPL основана на принципе "наследования" или "копилефте", согласно которому пользователю предоставляется право на модифицирование, копирование и распространение ПО с гарантией на то, что и пользователи производных программ получат эти же права. Однако, продавать получившиеся программы можно.
+ **CC0** is the "**no [[copyright]] [[reserved]]**" option in the Creative Commons toolkit - it effectively means relinquishing all copyright and similar rights that you hold in a work and dedicating those rights to the public domain.

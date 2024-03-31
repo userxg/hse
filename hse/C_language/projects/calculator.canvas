@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"66a3ce84fb77a41d","type":"text","text":"functions\ndeterminate\nfind\naddition\nproduct\ninterfaces","x":-89,"y":512,"width":250,"height":248},
+		{"id":"c8bbb445f2b33ea8","type":"text","text":"functions","x":533,"y":359,"width":250,"height":60},
+		{"id":"3b9d23d4387b8298","type":"text","text":"functions:\n\n1) вывести интерфейс\n2) посчитать выражение\n\n","x":1440,"y":4,"width":250,"height":385},
+		{"id":"f3323dd68a4df845","x":1760,"y":422,"width":250,"height":60,"type":"text","text":"CLASS: Stack"},
+		{"id":"b39b611866d5fdea","x":276,"y":524,"width":507,"height":236,"type":"text","text":"CLASS: DOUBLE LINKED STACK\nCLASS: vec2\nCLASS: HASHMAP\nCLASS: ReversPolishNotation\nOverloaded  Math in vec2\nFunctions for vec2"},
+		{"id":"7919074fcdf4f449","type":"text","text":"INTERFACE:\n1 - Calculate determinate \n2 - FIND reverse matrix\n3 - addition of two\n4 - product of two\n","x":-320,"y":227,"width":321,"height":185},
+		{"id":"ad977dc51be741d3","type":"text","text":"INTERFACE:\nMEANING:\nThis section allows you to compute line expression\n\nRULES:\nFunction has priorities:\nBig Priorities: sin, cos () `*/`\nsmallest: - +\n\nRANGE:\nOverall     -2^80 < x < 2^80\n sin, cos -  ` -1 < x < 1`\n\n","x":1005,"y":359,"width":380,"height":478},
+		{"id":"b819d0ecdfcf4824","type":"text","text":"CLASS:\nMATRIX","x":161,"y":-244,"width":162,"height":99},
+		{"id":"01bc29df38234369","type":"text","text":"CLASS: \nCOMPLEX","x":549,"y":-244,"width":219,"height":106},
+		{"id":"43eb09f0bc87743c","type":"text","text":"CLASS:\nCOMPUTE","x":1005,"y":-244,"width":250,"height":90},
+		{"id":"dfc912a848f6326e","type":"text","text":"INTERFACE","x":151,"y":260,"width":250,"height":60},
+		{"id":"6990e2f8efc29247","type":"text","text":"CALCULATOR (class)\nsections(classes):\n1 - COMPUTE\n2 - COMPLEX\n3 - MATRIX\n\nsome info like:\nenter 1 to move into target\nsection\nor zero for turn it off","x":549,"y":-800,"width":260,"height":420},
+		{"id":"71ee3f01c869b234","x":559,"y":-1060,"width":250,"height":60,"type":"text","text":"CLASS: COMMANDS"},
+		{"id":"e5d35304827909b1","x":1565,"y":568,"width":250,"height":60,"type":"text","text":"CLASS: compute_impl"}
+	],
+	"edges":[
+		{"id":"3d459dded193e6da","fromNode":"6990e2f8efc29247","fromSide":"bottom","toNode":"43eb09f0bc87743c","toSide":"top"},
+		{"id":"8aee7fe69f282878","fromNode":"3b9d23d4387b8298","fromSide":"bottom","toNode":"ad977dc51be741d3","toSide":"top"},
+		{"id":"681f1207ac4bf82a","fromNode":"43eb09f0bc87743c","fromSide":"bottom","toNode":"3b9d23d4387b8298","toSide":"top"},
+		{"id":"889b065ccf20d1ba","fromNode":"6990e2f8efc29247","fromSide":"bottom","toNode":"01bc29df38234369","toSide":"top"},
+		{"id":"abe15924ef6c9652","fromNode":"c8bbb445f2b33ea8","fromSide":"bottom","toNode":"dfc912a848f6326e","toSide":"top"},
+		{"id":"16d59d14f651c3cb","fromNode":"01bc29df38234369","fromSide":"bottom","toNode":"c8bbb445f2b33ea8","toSide":"top"},
+		{"id":"7d2c441d494c4bb7","fromNode":"6990e2f8efc29247","fromSide":"bottom","toNode":"b819d0ecdfcf4824","toSide":"top"},
+		{"id":"b96f57b7779880b8","fromNode":"b819d0ecdfcf4824","fromSide":"bottom","toNode":"7919074fcdf4f449","toSide":"top"},
+		{"id":"a8f9115c033d7333","fromNode":"b819d0ecdfcf4824","fromSide":"bottom","toNode":"66a3ce84fb77a41d","toSide":"top"},
+		{"id":"973e13d057fa1220","fromNode":"3b9d23d4387b8298","fromSide":"bottom","toNode":"e5d35304827909b1","toSide":"top"},
+		{"id":"94f4d783d529acab","fromNode":"3b9d23d4387b8298","fromSide":"bottom","toNode":"f3323dd68a4df845","toSide":"top"},
+		{"id":"e6179d4090702d08","fromNode":"c8bbb445f2b33ea8","fromSide":"bottom","toNode":"b39b611866d5fdea","toSide":"top"},
+		{"id":"8ccf646a8e765a2a","fromNode":"71ee3f01c869b234","fromSide":"bottom","toNode":"6990e2f8efc29247","toSide":"top"}
+	]
+}
